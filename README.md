@@ -1,9 +1,10 @@
-# HomeTasckPipedrive Application 🏡📲
+# HomeTasckPipedrive 🏡📲
 ## Key Features:
 - List screen displaying people obtained from Pipedrive API.
 - Detail screen for each person accessible from the list screen.
 - Proper handling empty data such as receiving contacts with no names, missing phone numbers or missing emails, images, etc.
 - Offline support: storing received data in CoreData.
+- Proper accessibility support: basic things for text.
 - Unit tests: check for successful receipt of API data.
 - Asynchronous programming using async/await for better performance and responsiveness.
   
@@ -27,7 +28,9 @@
 3. In the `apiKey` constant, replace the API token with yours.
 4. A new token will apply in the `ApiRequest` file
 
-## MVP Architecture
+## MVVM Architecture
 
-This project adopts the Model-View-Presenter (MVP) architecture to application logic.
+This project adopts the Model-View-ViewModule architecture to application logic.
+
+
 

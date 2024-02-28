@@ -16,6 +16,9 @@ struct SearchBar: View {
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray5))
                 .cornerRadius(8)
+                .accessibilityIdentifier("searchBar")
+                .accessibilityLabel("Search Pipedrive")
+                .accessibilityHint("Enter text to search")
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")

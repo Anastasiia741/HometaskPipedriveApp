@@ -57,5 +57,8 @@ struct PersonDetailView: View {
         .background(Color(.systemBackground))
         .cornerRadius(10)
         .shadow(radius: 3)
+        .accessibilityLabel("Person Details")
+        .accessibilityValue("Name: \(person.firstName?.replacingOccurrences(of: "[Sample]", with: "") ?? ""), Surname: \(person.lastName ?? ""), \(person.phone.compactMap { $0 }.joined(separator: ", ")) ")
+        .accessibilityHint("View detailed information about the person")
     }
 }

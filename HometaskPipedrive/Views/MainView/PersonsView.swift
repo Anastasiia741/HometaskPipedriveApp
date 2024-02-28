@@ -28,6 +28,10 @@ struct PersonsView: View {
                             .foregroundColor(.black)
                             .padding()
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .accessibilityLabel(Text("No results found"))
+                            .accessibilityIdentifier("NoResultsLabel")
+                            .accessibility(addTraits: .isStaticText)
+                            .accessibility(hidden: !showNoResults)
                         Spacer()
                             .onAppear {
                                 self.showNoResults = true
@@ -60,6 +64,7 @@ struct PersonsView: View {
                 }
             }
             .padding()
+            .accessibilityValue("Number of persons: \(viewModel.allPersons.count)")
         }
         .accentColor(.black)
     }
